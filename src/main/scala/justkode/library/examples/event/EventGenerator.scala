@@ -15,12 +15,12 @@ object EventGenerator {
   def getRandomEvent: Event = {
     val reportDate = new DateTime(2023, 1, 1, 0, 0).plusMinutes(Random.nextInt(60 * 24))
     Event(
-      Random.nextLong(5) + 1L,
-      Random.nextLong(5) + 1L,
+      Random.nextInt(5) + 1L,
+      Random.nextInt(5) + 1L,
       reportDate.getMillis,
       reportDate.toString("yyyyMMdd"),
       reportDate.toString("yyyyMMddHH"),
-      if (Random.nextLong(10) >= 1) 1 else 0,
+      if (Random.nextInt(10) >= 1) 1 else 0,
       Random.nextDouble() * 10
     )
   }
