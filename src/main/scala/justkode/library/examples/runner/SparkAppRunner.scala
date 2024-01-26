@@ -15,7 +15,7 @@ trait SparkAppRunner {
   sparkConf.set("spark.hadoop.fs.s3a.connection.ssl.enabled", "true")
   sparkConf.set("spark.sql.warehouse.dir", "s3a://warehouse/")
   sparkConf.set("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions")
-  sparkConf.set("spark.sql.catalog.s3", "org.apache.iceberg.spark.SparkCatalog")
+  sparkConf.set("spark.sql.catalog.s3", "org.apache.iceberg.spark.SparkSessionCatalog")
   sparkConf.set("spark.sql.catalog.s3.warehouse", "s3a://warehouse/")
   sparkConf.set("spark.sql.catalog.s3.type", "hadoop")
 
